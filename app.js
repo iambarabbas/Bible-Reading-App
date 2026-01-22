@@ -85,19 +85,11 @@ function renderWeek(){
       return b
     }
 
-    // helper to create the done label (non-button) with click-to-undo
+    // helper to create the done label (text-only, non-interactive)
     function makeDoneLabel(){
       const d = document.createElement('div')
       d.className = 'doneLabel'
       d.textContent = 'I Read Today'
-      // allow undo by clicking the label
-      d.addEventListener('click', ()=>{
-        localStorage.removeItem(key)
-        li.classList.remove('completed')
-        const newBtn = makeButton()
-        d.replaceWith(newBtn)
-        updateProgress()
-      })
       return d
     }
     // highlight today's weekday when viewing the current week
@@ -254,18 +246,3 @@ loadPlan().then(p=>{
   currentWeek = todayWeekIndex
   renderWeek()
 })
-
-// Theme toggle handling
-const themeToggle = document.getElementById('themeToggle')
-if(themeToggle){
-  function updateToggleText(){
-    const isLight = document.documentElement.classList.contains('light')
-    themeToggle.textContent = isLight ? '☀️' : '🌙'
-  }
-  themeToggle.addEventListener('click', ()=>{
-    const isLight = document.documentElement.classList.toggle('light')
-    try{ localStorage.setItem('theme', isLight ? 'light' : 'dark') }catch(e){}
-    updateToggleText()
-  })
-  updateToggleText()
-}

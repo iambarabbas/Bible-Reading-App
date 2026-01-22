@@ -14,7 +14,6 @@
           <button id="prevWeek">◀</button>
           <span id="weekLabel">Week 1</span>
           <button id="nextWeek">▶</button>
-          <button id="themeToggle" title="Toggle theme">🌙</button>
         </div>
       </header>
 
@@ -33,12 +32,3 @@
     <script src="app.js"></script>
   </body>
 </html>
-
-<script>
-  // Apply persisted theme preference early to avoid flash.
-  try{
-    const theme = localStorage.getItem('theme')
-    if(theme === 'light') document.documentElement.classList.add('light')
-    else document.documentElement.classList.remove('light')
-  }catch(e){/* ignore */}
-</script>
