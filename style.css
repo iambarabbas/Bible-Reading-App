@@ -27,7 +27,7 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
 .app{max-width:760px;margin:28px auto;padding:18px}
 .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .controls{display:flex;gap:12px;align-items:center}
-button{background:#e6eef8;color:var(--accent);border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-size:1rem;min-height:44px}
+button{background:#e6eef8;color:#000;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-size:1rem;min-height:44px}
 button#prevWeek,button#nextWeek{background:#e6edf7;color:var(--accent);padding:8px 12px}
 .progress{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
 .days{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:14px}
@@ -39,7 +39,7 @@ button#prevWeek,button#nextWeek{background:#e6edf7;color:var(--accent);padding:8
 .day .desc .passage{font-size:1.03rem}
 .completed{opacity:0.85}
 
-.doneLabel{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:var(--btn-text);font-weight:600;text-align:center;min-height:40px}
+.doneLabel{color:var(--text);font-weight:600}
 
 .textLabel{display:inline-block;padding:10px 14px;border-radius:8px;color:var(--text);font-weight:600;text-align:center;opacity:0.7;min-height:40px}
 .footer{margin-top:18px;color:var(--muted)}
