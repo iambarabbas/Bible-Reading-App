@@ -1,0 +1,111 @@
+{
+  "weeks": [
+    {
+      "name": "Week 1",
+      "days": [
+        "1 Jan 01 2026 - Jan 07 2026 Acts 1-5",
+        "2 Jan 08 2026 - Jan 14 2026 Acts 6-10",
+        "3 Jan 15 2026 - Jan 21 2026 Acts 11-15",
+        "4 Jan 22 2026 - Jan 28 2026 Acts 16-20",
+        "5 Jan 29 2026 - Feb 04 2026 Acts 21-28"
+      ]
+    },
+    {
+      "name": "Week 2",
+      "days": [
+        "6 Feb 05 2026 - Feb 11 2026 John 1-5",
+        "7 Feb 12 2026 - Feb 18 2026 John 6-10",
+        "8 Feb 19 2026 - Feb 25 2026 John 11-15",
+        "9 Feb 26 2026 - Mar 04 2026 John 16-21",
+        "10 Mar 05 2026 - Mar 11 2026 Romans 1-5"
+      ]
+    },
+    {
+      "name": "Week 3",
+      "days": [
+        "11 Mar 12 2026 - Mar 18 2026 Romans 6-10",
+        "12 Mar 19 2026 - Mar 25 2026 Romans 11-16",
+        "13 Mar 26 2026 - Apr 01 2026 1 Corinthians 1-7",
+        "14 Apr 02 2026 - Apr 08 2026 1 Corinthians 8-16",
+        "15 Apr 09 2026 - Apr 15 2026 2 Corinthians 1-7"
+      ]
+    },
+    {
+      "name": "Week 4",
+      "days": [
+        "16 Apr 16 2026 - Apr 22 2026 Luke 1-5",
+        "17 Apr 23 2026 - Apr 29 2026 Luke 6-10",
+        "18 Apr 30 2026 - May 06 2026 Luke 11-15",
+        "19 May 07 2026 - May 13 2026 Luke 16-20",
+        "20 May 14 2026 - May 20 2026 Luke 21-24"
+      ]
+    },
+    {
+      "name": "Week 5",
+      "days": [
+        "21 May 21 2026 - May 27 2026 Galatians 1-6",
+        "22 May 28 2026 - Jun 03 2026 Ephesians 1-5",
+        "23 Jun 04 2026 - Jun 10 2026 Philippians 1-4",
+        "24 Jun 11 2026 - Jun 17 2026 Colossians 1-4",
+        "25 Jun 18 2026 - Jun 24 2026 1 Thessalonians 1-5"
+      ]
+    },
+    {
+      "name": "Week 6",
+      "days": [
+        "26 Jun 25 2026 - Jul 01 2026 2 Thessalonians 1-3",
+        "27 Jul 02 2026 - Jul 08 2026 1 Timothy 1-6",
+        "28 Jul 09 2026 - Jul 15 2026 2 Timothy 1-4, Titus 1",
+        "29 Jul 16 2026 - Jul 22 2026 Hebrews 1-5",
+        "30 Jul 23 2026 - Jul 29 2026 Hebrews 6-10"
+      ]
+    },
+    {
+      "name": "Week 7",
+      "days": [
+        "31 Jul 30 2026 - Aug 05 2026 Hebrews 11-13",
+        "32 Aug 06 2026 - Aug 12 2026 James 1-5",
+        "33 Aug 13 2026 - Aug 19 2026 1 Peter 1-5",
+        "34 Aug 20 2026 - Aug 26 2026 2 Peter 1-3, 1 John 1-2",
+        "35 Aug 27 2026 - Sep 02 2026 1 John 3-5, 2 John, 3 John, Jude"
+      ]
+    },
+    {
+      "name": "Week 8",
+      "days": [
+        "36 Sep 03 2026 - Sep 09 2026 Matthew 1-4",
+        "37 Sep 10 2026 - Sep 16 2026 Matthew 5-8",
+        "38 Sep 17 2026 - Sep 23 2026 Matthew 9-12",
+        "39 Sep 24 2026 - Sep 30 2026 Matthew 13-16",
+        "40 Oct 01 2026 - Oct 07 2026 Matthew 17-20"
+      ]
+    },
+    {
+      "name": "Week 9",
+      "days": [
+        "41 Oct 08 2026 - Oct 14 2026 Matthew 21-24",
+        "42 Oct 15 2026 - Oct 21 2026 Matthew 25-28",
+        "43 Oct 22 2026 - Oct 28 2026 Revelation 1-3",
+        "44 Oct 29 2026 - Nov 04 2026 Revelation 4-6",
+        "45 Nov 05 2026 - Nov 11 2026 Revelation 7-9"
+      ]
+    },
+    {
+      "name": "Week 10",
+      "days": [
+        "46 Nov 12 2026 - Nov 18 2026 Revelation 10-12",
+        "47 Nov 19 2026 - Nov 25 2026 Revelation 13-15",
+        "48 Nov 26 2026 - Dec 02 2026 Revelation 16-18",
+        "49 Dec 03 2026 - Dec 09 2026 Revelation 19-22",
+        "50 Dec 10 2026 - Dec 16 2026 Mark 1-5"
+      ]
+    },
+    {
+      "name": "Week 11",
+      "days": [
+        "51 Dec 17 2026 - Dec 23 2026 Mark 6-10",
+        "52 Dec 24 2026 - Dec 30 2026 Mark 11-16"
+      ]
+    }
+  ]
+}

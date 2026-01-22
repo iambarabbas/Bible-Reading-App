@@ -1,0 +1,48 @@
+:root{
+  --bg:#f7f7fb;
+  --card:#fff;
+  --accent:#2b6cb0;
+  --muted:#666;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:0;background:var(--bg);color:#111}
+.app{max-width:760px;margin:28px auto;padding:18px}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.controls{display:flex;gap:8px;align-items:center}
+button{background:var(--accent);color:white;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+button#prevWeek,button#nextWeek{background:#e6edf7;color:var(--accent);padding:6px 10px}
+.progress{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.days{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:10px}
+.day{background:var(--card);padding:14px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 0 rgba(0,0,0,0.05)}
+.day .meta{display:flex;flex-direction:column}
+.day .title{font-weight:600}
+.day .desc{display:flex;flex-direction:column;gap:4px}
+.day .desc .date{font-size:0.85rem;color:var(--muted)}
+.day .desc .passage{font-size:1rem}
+.completed{opacity:0.5;text-decoration:line-through}
+.footer{margin-top:18px;color:var(--muted)}
+
+.error{background:#fff3f3;border:1px solid #f5c2c2;color:#9b2c2c;padding:12px;border-radius:8px}
+
+.week-passage{font-size:1.05rem;font-weight:600;color:var(--accent);max-width:70%}
+
+button#resetWeek{background:#f3f4f6;color:#111;border:1px solid #d1d5db;padding:8px 12px;border-radius:6px}
+
+.day.today{border:1px solid rgba(43,108,176,0.18);background:rgba(43,108,176,0.04);box-shadow:0 2px 6px rgba(43,108,176,0.06)}
+
+.day.muted{opacity:0.6}
+.day.muted .title{color:var(--muted)}
+.day.muted button{opacity:0.85;background:#e6e7ea;color:#111}
+
+.day.future{background:rgba(43,108,176,0.02);border-left:4px solid rgba(43,108,176,0.12)}
+.day.future .title{color:var(--accent)}
+
+@media(min-width:640px){
+  .days{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:640px){
+  .header{flex-direction:column;align-items:flex-start;gap:8px}
+  .controls{order:2;display:flex;gap:8px}
+  .header h1{order:1}
+}

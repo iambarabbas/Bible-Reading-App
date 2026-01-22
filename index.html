@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bible Reading Plan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Brett Reading Plan</h1>
+        <div class="controls">
+          <button id="prevWeek">◀</button>
+          <span id="weekLabel">Week 1</span>
+          <button id="nextWeek">▶</button>
+        </div>
+      </header>
+
+      <section class="progress">
+        <div id="weekPassage" class="week-passage"></div>
+        <button id="resetWeek">Reset Week</button>
+      </section>
+
+      <ul id="days" class="days"></ul>
+
+      <footer class="footer">
+        <small>Only Monday–Friday readings count. Click a day to mark complete.</small>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
