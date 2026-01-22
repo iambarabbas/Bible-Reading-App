@@ -115,14 +115,23 @@ function renderWeek(){
       if(i < todayIndex) li.classList.add('muted')
       if(i > todayIndex) li.classList.add('future')
     }
-    // attach the appropriate action element (button or done label)
-    if(done){
-      li.classList.add('completed')
-      li.appendChild(meta)
-      li.appendChild(makeDoneLabel())
+    // attach the appropriate action element based on day state
+    li.appendChild(meta)
+    
+    // past days show text-only labels (no button/interactivity)
+    if(isPastWeek || (isThisWeek && typeof todayIndex === 'number' && i < todayIndex)){
+      const textLabel = document.createElement('div')
+      textLabel.className = 'textLabel'
+      textLabel.textContent = done ? 'I Read' : "I didn't read"
+      li.appendChild(textLabel)
     } else {
-      li.appendChild(meta)
-      li.appendChild(makeButton())
+      // future/current days: button or done label
+      if(done){
+        li.classList.add('completed')
+        li.appendChild(makeDoneLabel())
+      } else {
+        li.appendChild(makeButton())
+      }
     }
     daysEl.appendChild(li)
   })
