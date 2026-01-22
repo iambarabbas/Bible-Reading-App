@@ -67,11 +67,39 @@ function renderWeek(){
     // per-day view should not show the scripture (it's shown in header)
     meta.appendChild(title)
 
-    const btn = document.createElement('button')
-    btn.textContent = 'Need To Read'
     const key = storageKey(currentWeek, i)
     const done = localStorage.getItem(key) === '1'
-    if(done){ li.classList.add('completed'); btn.textContent = 'I Read Today' }
+
+    // helper to create the interactive button
+    function makeButton(){
+      const b = document.createElement('button')
+      b.textContent = 'Need To Read'
+      b.addEventListener('click', ()=>{
+        // mark done: persist, swap UI to a non-button label
+        localStorage.setItem(key, '1')
+        li.classList.add('completed')
+        const label = makeDoneLabel()
+        b.replaceWith(label)
+        updateProgress()
+      })
+      return b
+    }
+
+    // helper to create the done label (non-button) with click-to-undo
+    function makeDoneLabel(){
+      const d = document.createElement('div')
+      d.className = 'doneLabel'
+      d.textContent = 'I Read Today'
+      // allow undo by clicking the label
+      d.addEventListener('click', ()=>{
+        localStorage.removeItem(key)
+        li.classList.remove('completed')
+        const newBtn = makeButton()
+        d.replaceWith(newBtn)
+        updateProgress()
+      })
+      return d
+    }
     // highlight today's weekday when viewing the current week
     if(isThisWeek && typeof todayIndex === 'number' && todayIndex === i){
       li.classList.add('today')
@@ -87,22 +115,15 @@ function renderWeek(){
       if(i < todayIndex) li.classList.add('muted')
       if(i > todayIndex) li.classList.add('future')
     }
-    btn.addEventListener('click', ()=>{
-      const isDone = localStorage.getItem(key) === '1'
-      if(isDone){
-        localStorage.removeItem(key)
-        btn.textContent = 'Need To Read'
-        li.classList.remove('completed')
-      } else {
-        localStorage.setItem(key, '1')
-        btn.textContent = 'I Read Today'
-        li.classList.add('completed')
-      }
-      updateProgress()
-    })
-
-    li.appendChild(meta)
-    li.appendChild(btn)
+    // attach the appropriate action element (button or done label)
+    if(done){
+      li.classList.add('completed')
+      li.appendChild(meta)
+      li.appendChild(makeDoneLabel())
+    } else {
+      li.appendChild(meta)
+      li.appendChild(makeButton())
+    }
     daysEl.appendChild(li)
   })
   updateProgress()
@@ -224,3 +245,18 @@ loadPlan().then(p=>{
   currentWeek = todayWeekIndex
   renderWeek()
 })
+
+// Theme toggle handling
+const themeToggle = document.getElementById('themeToggle')
+if(themeToggle){
+  function updateToggleText(){
+    const isLight = document.documentElement.classList.contains('light')
+    themeToggle.textContent = isLight ? '☀️' : '🌙'
+  }
+  themeToggle.addEventListener('click', ()=>{
+    const isLight = document.documentElement.classList.toggle('light')
+    try{ localStorage.setItem('theme', isLight ? 'light' : 'dark') }catch(e){}
+    updateToggleText()
+  })
+  updateToggleText()
+}
