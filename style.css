@@ -52,13 +52,8 @@ button#resetWeek{background:#f3f4f6;color:#111;border:1px solid #d1d5db;padding:
 
 .day.muted{opacity:0.6}
 .day.muted .title{color:var(--muted)}
-.day.muted button{opacity:0.85;background:#e6e7ea;color:#111}
 
-.day.future{border-left:4px solid rgba(11,18,40,0.16)}
-.day.future .title{color:var(--accent-dark)}
-.day.future .desc .passage{color:var(--accent-dark)}
-.day.future .desc .date{color:var(--accent-dark)}
-.day.future button{background:var(--accent-dark);color:var(--text);} 
+.day.future{border-left:4px solid rgba(11,18,40,0.16)} 
 
 @media(min-width:640px){
   .days{grid-template-columns:repeat(2,1fr)}
